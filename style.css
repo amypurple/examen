@@ -12,7 +12,7 @@ body {
 .choix {
     background-color: aliceblue;
     border-radius: 15px 0px 15px 0px;
-    box-shadow: #3428a3 3px 1.5px;
+    box-shadow: mediumblue 3px 1.5px;
     margin: 20px 0px;
     padding: 20px 50px;
 }
@@ -54,7 +54,6 @@ body {
 
     .choix {
         border-radius: 10px 0px 10px 0px;
-        box-shadow: #3428a3 2px 1px;
         margin: 15px 0px;
         padding: 15px 42px;
     }
@@ -83,7 +82,7 @@ body {
 }
 
 .zoneTitre {
-    background-color: #3428a3;
+    background-color: mediumblue;
     color: white;
     font-size: 1.5em;
     border-radius: 45px 45px 0 0;
@@ -95,7 +94,7 @@ body {
 }
 
 .zoneHorloge {
-    background-color: #3428a3;
+    background-color: mediumblue;
     color: white;
     font-size: 1.25em;
     text-align: center;
@@ -103,7 +102,7 @@ body {
 }
 
 .textPointage {
-    display: inline-block;
+    display: block;
     float: right;
     margin-top: -0.7em;
 }
@@ -129,16 +128,25 @@ span {
 
 .good {
     background-color: greenyellow;
-    box-shadow: green;
+    box-shadow: green 3px 1.5px;
 }
 
 .bad {
     background-color: pink;
-    box-shadow: red;
+    box-shadow: red 3px 1.5px;
 }
 
+.light {
+    transition: all 0.5s;
+}
+
+.light:hover::before {
+    box-shadow: 0 0 15px black;
+}
+  
 .light:hover {
-    background-color: #FAFFFF;
+    box-shadow: 2px 2px 2px 2px black;
+    text-shadow: 0 0 1px darkslategrey;
 }
 
 #minutes,

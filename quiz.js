@@ -76,7 +76,7 @@ function loadNextQuestion() {
                     if (clickable && quiz)
                     {
                         e.currentTarget.classList.add("good");
-                        e.currentTarget.classList.remove("light");
+                        removeLightsEffect();                        
                         points++;
                         HTMLpoints.innerHTML = points;
                         clickable = false;
@@ -89,7 +89,6 @@ function loadNextQuestion() {
                     if (clickable && quiz)
                     {
                         e.currentTarget.classList.add("bad");
-                        e.currentTarget.classList.remove("light");
                         reveal();
                         clickable = false;
                     } else {
@@ -107,10 +106,19 @@ function loadNextQuestion() {
     }
 }
 
+function removeLightsEffect() {
+    let i;
+    let choix;
+    for (i=0;i<data[numero].choix.length;i++) {
+        choix = document.getElementById("choix"+(i+1));
+        choix.classList.remove("light");
+    }
+}
+
 function reveal() {
-    bonChoix = document.getElementById("choix"+(data[numero].reponse));
+    let bonChoix = document.getElementById("choix"+(data[numero].reponse));
     bonChoix.classList.add("good");
-    bonChoix.classList.remove("light");
+    removeLightsEffect();
 }
 
 var data = [
