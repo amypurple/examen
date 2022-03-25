@@ -40,11 +40,16 @@ function startQuiz() {
         if (temps == 0) {
             quiz = false;
             clickable = false;
+            stopClock();
             alert("Temps Écoulé");
         }
     }, 1000);
     HTMLtotal.innerHTML = total;
     loadNextQuestion();
+}
+
+function stopClock() {
+    clearInterval(horloge);
 }
 
 function loadNextQuestion() {
@@ -97,6 +102,7 @@ function loadNextQuestion() {
 
         clickable = true;
     } else {
+        stopClock();
         alert("Quiz Terminé");
     }
 }
