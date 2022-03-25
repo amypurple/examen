@@ -40,6 +40,7 @@ function startQuiz() {
         if (temps == 0) {
             quiz = false;
             clickable = false;
+            alert("Temps Écoulé");
         }
     }, 1000);
     HTMLtotal.innerHTML = total;
