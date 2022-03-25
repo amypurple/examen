@@ -1,7 +1,27 @@
 body {
     font-family: Segoe UI, Segoe WP, Tahoma, Arial, sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     background-color: lavender;
+}
+
+.divBlock {
+    display: block;
+    padding: 45px;
+}
+
+.choix {
+    background-color: aliceblue;
+    border-radius: 15px 0px 15px 0px;
+    box-shadow: #3428a3 3px 1.5px;
+    margin: 20px 0px;
+    padding: 20px 50px;
+}
+
+
+.zoneQuestion {
+    background: white;
+    opacity: .90;
+    padding: 20px 30px 60px;
 }
 
 .zonePage {
@@ -16,6 +36,46 @@ body {
     width: 85%;
 }
 
+@media screen and (max-width: 800px) {
+    .zonePage {
+        margin-top: 30px;
+    }
+    .zoneQuiz {
+        width: 95%
+    }
+    body {
+        font-size: 1.28rem;        
+    }
+    .divBlock {
+        padding: 32px 44px;
+    }
+    .choix {
+        border-radius: 10px 0px 10px 0px;
+        box-shadow: #3428a3 2px 1px;        
+        margin: 15px 0px;
+        padding: 15px 42px;    
+    }
+
+    .zoneQuestion {
+        padding: 15px 25px 40px;        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .zonePage {
+        margin-top: 0px;
+    }
+    .zoneQuiz {
+        width: 100%
+    }
+    body {
+        font-size: 1.15rem;        
+    }
+    .divBlock {
+        padding: 25px 35px;
+    }
+}
+
 .zoneTitre {
     background-color: #3428a3;
     color: white;
@@ -26,12 +86,6 @@ body {
 .zonePointage {
     background-color: #f4f4f4;
     color: #03787c;
-}
-
-.zoneQuestion {
-    background: white;
-    opacity: .90;
-    padding: 20px 30px 70px;
 }
 
 .zoneHorloge {
@@ -48,10 +102,6 @@ body {
     margin-top: -0.7em;
 }
 
-.divBlock {
-    display: block;
-    padding: 45px;
-}
 
 #numero,
 #total,
@@ -70,13 +120,6 @@ span {
     line-height: 140%;
 }
 
-.choix {
-    background-color: aliceblue;
-    margin: 20px 0px;
-    border-radius: 10px 0px 10px 0px;
-    padding: 20px 50px;
-    box-shadow: #3428a3 1px 1px;
-}
 
 .good {
     background-color: greenyellow;
