@@ -3,17 +3,45 @@ const HTMLpoints = document.getElementById("points");
 const HTMLtotal = document.getElementById("total");
 const HTMLquestion = document.getElementById("question");
 const HTMLchoix = document.getElementById("choix");
+const HTMLminutes = document.getElementById("minutes");
+const HTMLsecondes = document.getElementById("secondes");
 
 var points = 0;
 var numero = 0;
 var total = 0; 
+var temps = 0; // temps en secondes
+
+var horloge;
 
 var clickable = true;
+var quiz = true;
+
+function pad(n, width, z) {
+    z = z || '0';
+    n = n + '';
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+function updateClock() {
+    HTMLminutes.innerHTML = Math.floor(temps/60);
+    HTMLsecondes.innerHTML = pad(temps % 60,2);
+}
 
 function startQuiz() {
+    quiz = true;
     numero = -1;
     points = 0;
     total = data.length;
+    temps = 600;
+    updateClock();
+    horloge = setInterval(()=> {
+        temps--;
+        updateClock();
+        if (temps == 0) {
+            quiz = false;
+            clickable = false;
+        }
+    }, 1000);
     HTMLtotal.innerHTML = total;
     loadNextQuestion();
 }
@@ -37,24 +65,24 @@ function loadNextQuestion() {
             div.classList.add("choix");
             if (reponse == i+1) {    
                 div.addEventListener("click", (e) => {
-                    if (clickable)
+                    if (clickable && quiz)
                     {
                         e.currentTarget.classList.add("good");
                         points++;
                         HTMLpoints.innerHTML = points;
                         clickable = false;
                     } else {
-                        loadNextQuestion();
+                        if (quiz) loadNextQuestion();
                     }
                 });
             } else {
                 div.addEventListener("click", (e) => {
-                    if (clickable)
+                    if (clickable && quiz)
                     {
                         e.currentTarget.classList.add("bad");
                         clickable = false;
                     } else {
-                        loadNextQuestion();
+                        if (quiz) loadNextQuestion();
                     }
                 });
             }
@@ -83,6 +111,7 @@ var data = [
             "Réalisation des tests de validation d’un logiciel",
             "Représentation à l’aide de différents diagrammes",
             "Écriture de l’algorithme d’un logiciel",
+            "Modification d’un logiciel existant",
             "Toutes ces réponses"],
         "reponse": 2
     },

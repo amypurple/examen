@@ -1,48 +1,61 @@
 body {
-    font-family: Segoe UI,Segoe WP,Tahoma,Arial,sans-serif;
+    font-family: Segoe UI, Segoe WP, Tahoma, Arial, sans-serif;
     font-size: 1.3rem;
-    background-color: purple;
+    background-color: lavender;
+}
+
+.zonePage {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .zoneQuiz {
-    display:flex;
-    flex-direction: column;
-    align-content: center;
-    margin: 50px;
-    width: 80%;
+    display: block;
+    width: 85%;
 }
 
 .zoneTitre {
     background-color: #3428a3;
-    color: #FFFFFF;
+    color: white;
     font-size: 1.5em;
-    width: 100%;
-}    
+    border-radius: 45px 45px 0 0 ;
+}
 
 .zonePointage {
     background-color: #f4f4f4;
     color: #03787c;
-    width: 100%;
 }
 
 .zoneQuestion {
-        background: #fff;
-        opacity: .90;
-        padding: 20px 30px 70px;
-        width: 100%;
+    background: white;
+    opacity: .90;
+    padding: 20px 30px 70px;
+}
+
+.zoneHorloge {
+    background-color: #3428a3;
+    color: white;
+    font-size: 1.25em;
+    text-align: center;
+    border-radius: 0 0 45px 45px;    
 }
 
 .textPointage {
     display: inline-block;
-    float: right;
+    float:right;
+    margin-top: -0.7em;
 }
 
 .divBlock {
     display: block;
-    padding: 50px;
+    padding: 45px;
 }
 
-#numero, #total, #points {
+#numero,
+#total,
+#points {
     color: black;
 }
 
@@ -53,13 +66,13 @@ body {
 
 span {
     word-wrap: break-word;
-    margin:5px;
+    margin: 5px;
     line-height: 140%;
 }
 
 .choix {
-    background-color:aliceblue;
-    margin:20px 0px;
+    background-color: aliceblue;
+    margin: 20px 0px;
     border-radius: 10px 0px 10px 0px;
     padding: 20px 50px;
     box-shadow: #3428a3 1px 1px;
@@ -73,4 +86,32 @@ span {
 .bad {
     background-color: pink;
     box-shadow: red;
+}
+
+#minutes,
+#secondes {
+    color: white;
+}
+
+#deuxpoints {
+    color: white;
+    animation: clignote 1s linear infinite;
+}
+
+@keyframes clignote {
+    0% {
+        opacity: 100%;
+    }
+
+    45% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    95% {
+        opacity: 0;
+    }
 }
