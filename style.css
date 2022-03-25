@@ -2,6 +2,7 @@ body {
     font-family: Segoe UI, Segoe WP, Tahoma, Arial, sans-serif;
     font-size: 1.35rem;
     background-color: lavender;
+    transition: all 0.25s; /* smooth transition between resolution */
 }
 
 .divBlock {
@@ -13,14 +14,14 @@ body {
     background-color: aliceblue;
     border-radius: 15px 0px 15px 0px;
     box-shadow: mediumblue 3px 1.5px;
-    margin: 20px 0px;
+    margin: 17px 0px;
     padding: 20px 50px;
 }
 
 .zoneQuestion {
     background: white;
     opacity: .90;
-    padding: 20px 30px 60px;
+    padding: 20px 30px 50px;
 }
 
 .zonePage {
@@ -54,12 +55,12 @@ body {
 
     .choix {
         border-radius: 10px 0px 10px 0px;
-        margin: 15px 0px;
+        margin: 14px 0px;
         padding: 15px 42px;
     }
 
     .zoneQuestion {
-        padding: 15px 25px 40px;
+        padding: 15px 25px 38px;
     }
 }
 
@@ -137,15 +138,15 @@ span {
 }
 
 .light {
-    transition: all 0.5s;
+    transition: text-shadow 0.5s, box-shadow 0.5s;
 }
 
 .light:hover::before {
-    box-shadow: 0 0 15px black;
+    box-shadow: 0 0 15px blue;
 }
   
 .light:hover {
-    box-shadow: 2px 2px 2px 2px black;
+    box-shadow: 2px 2px 2px 2px darkblue;
     text-shadow: 0 0 1px darkslategrey;
 }
 
