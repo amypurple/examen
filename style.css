@@ -1,0 +1,76 @@
+body {
+    font-family: Segoe UI,Segoe WP,Tahoma,Arial,sans-serif;
+    font-size: 1.3rem;
+    background-color: purple;
+}
+
+.zoneQuiz {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    margin: 50px;
+    width: 80%;
+}
+
+.zoneTitre {
+    background-color: #3428a3;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    width: 100%;
+}    
+
+.zonePointage {
+    background-color: #f4f4f4;
+    color: #03787c;
+    width: 100%;
+}
+
+.zoneQuestion {
+        background: #fff;
+        opacity: .90;
+        padding: 20px 30px 70px;
+        width: 100%;
+}
+
+.textPointage {
+    display: inline-block;
+    float: right;
+}
+
+.divBlock {
+    display: block;
+    padding: 50px;
+}
+
+#numero, #total, #points {
+    color: black;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    word-wrap: break-word;
+    margin:5px;
+    line-height: 140%;
+}
+
+.choix {
+    background-color:aliceblue;
+    margin:20px 0px;
+    border-radius: 10px 0px 10px 0px;
+    padding: 20px 50px;
+    box-shadow: #3428a3 1px 1px;
+}
+
+.good {
+    background-color: greenyellow;
+    box-shadow: green;
+}
+
+.bad {
+    background-color: pink;
+    box-shadow: red;
+}
