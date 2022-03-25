@@ -17,7 +17,6 @@ body {
     padding: 20px 50px;
 }
 
-
 .zoneQuestion {
     background: white;
     opacity: .90;
@@ -40,24 +39,28 @@ body {
     .zonePage {
         margin-top: 30px;
     }
+
     .zoneQuiz {
         width: 95%
     }
+
     body {
-        font-size: 1.28rem;        
+        font-size: 1.28rem;
     }
+
     .divBlock {
         padding: 32px 44px;
     }
+
     .choix {
         border-radius: 10px 0px 10px 0px;
-        box-shadow: #3428a3 2px 1px;        
+        box-shadow: #3428a3 2px 1px;
         margin: 15px 0px;
-        padding: 15px 42px;    
+        padding: 15px 42px;
     }
 
     .zoneQuestion {
-        padding: 15px 25px 40px;        
+        padding: 15px 25px 40px;
     }
 }
 
@@ -65,12 +68,15 @@ body {
     .zonePage {
         margin-top: 0px;
     }
+
     .zoneQuiz {
         width: 100%
     }
+
     body {
-        font-size: 1.15rem;        
+        font-size: 1.15rem;
     }
+
     .divBlock {
         padding: 25px 35px;
     }
@@ -80,7 +86,7 @@ body {
     background-color: #3428a3;
     color: white;
     font-size: 1.5em;
-    border-radius: 45px 45px 0 0 ;
+    border-radius: 45px 45px 0 0;
 }
 
 .zonePointage {
@@ -93,12 +99,12 @@ body {
     color: white;
     font-size: 1.25em;
     text-align: center;
-    border-radius: 0 0 45px 45px;    
+    border-radius: 0 0 45px 45px;
 }
 
 .textPointage {
     display: inline-block;
-    float:right;
+    float: right;
     margin-top: -0.7em;
 }
 
@@ -129,6 +135,10 @@ span {
 .bad {
     background-color: pink;
     box-shadow: red;
+}
+
+.light:hover {
+    background-color: #FAFFFF;
 }
 
 #minutes,

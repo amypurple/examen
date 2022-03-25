@@ -62,13 +62,16 @@ function loadNextQuestion() {
         let i;
         for (i=0;i<choix.length;i++) {
             let div = document.createElement("div");
+            div.id = "choix"+(i+1);
             div.innerHTML = choix[i];
             div.classList.add("choix");
+            div.classList.add("light");
             if (reponse == i+1) {    
                 div.addEventListener("click", (e) => {
                     if (clickable && quiz)
                     {
                         e.currentTarget.classList.add("good");
+                        e.currentTarget.classList.remove("light");
                         points++;
                         HTMLpoints.innerHTML = points;
                         clickable = false;
@@ -81,6 +84,8 @@ function loadNextQuestion() {
                     if (clickable && quiz)
                     {
                         e.currentTarget.classList.add("bad");
+                        e.currentTarget.classList.remove("light");
+                        reveal();
                         clickable = false;
                     } else {
                         if (quiz) loadNextQuestion();
@@ -96,6 +101,11 @@ function loadNextQuestion() {
     }
 }
 
+function reveal() {
+    bonChoix = document.getElementById("choix"+(data[numero].reponse));
+    bonChoix.classList.add("good");
+    bonChoix.classList.remove("light");
+}
 
 var data = [
     {
